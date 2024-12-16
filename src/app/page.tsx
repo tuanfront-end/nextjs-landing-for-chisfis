@@ -1,80 +1,48 @@
-import { Nav } from "@/components/Nav";
-import Section1 from "@/components/Section1";
-import Section2 from "@/components/Section2";
-import Section3 from "@/components/Section3";
-import Section4 from "@/components/Section4";
-import Section5 from "@/components/Section5";
-import Section6 from "@/components/Section6";
-import { SectionDemos } from "@/components/SectionDemos";
-import { Inter } from "next/font/google";
+import { Nav } from '@/components/Nav'
+import Section1 from '@/components/Section1'
+import Section5 from '@/components/Section5'
+import Section6 from '@/components/Section6'
+import { SectionDemos } from '@/components/SectionDemos'
+import Example from '@/components/SectionX'
+import Example2 from '@/components/SectionX2'
+import { Inter } from 'next/font/google'
 
 const poppins = Inter({
-  subsets: ["latin"],
-});
+	subsets: ['latin'],
+})
 
 declare global {
-  var MORE_DEMOS: {
-    img: string;
-    text: string;
-    subText: string;
-    link: string;
-    tags?: string[];
-  }[];
+	var MORE_DEMOS: {
+		img: string
+		text: string
+		subText: string
+		link: string
+		tags?: string[]
+	}[]
 }
 
 export default function Home() {
-  return (
-    <main className={poppins.className}>
-      <div className="relative">
-        <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
-          <svg
-            className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
-            viewBox="0 0 1155 678"
-          >
-            <path
-              fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
-              fillOpacity=".3"
-              d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
-            />
-            <defs>
-              <linearGradient
-                id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
-                x1="1155.49"
-                x2="-78.208"
-                y1=".177"
-                y2="474.645"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#9089FC" />
-                <stop offset={1} stopColor="#FF80B5" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+	return (
+		<main className={poppins.className}>
+			<Nav />
 
-        <div className="relative z-10">
-          <Nav />
-          <div className="container pb-20 pt-16">
-            <Section1 />
-          </div>
+			<div className="py-24 sm:py-32 xl:py-40">
+				<Section1 />
+			</div>
 
-          <div className=" bg-slate-900  rounded-3xl dark text-slate-200">
-            <div className="container ">
-              <div id="demos" className="py-20 ">
-                <SectionDemos />
-              </div>
-              <Section2 />
-              <Section3 />
-              <Section4 />
-            </div>
-          </div>
+			<div id="demo" className="dark bg-gray-800 py-24 text-slate-200 sm:py-32">
+				<SectionDemos />
+			</div>
 
-          <div className="container">
-            <Section5 />
-            <Section6 />
-          </div>
-        </div>
-      </div>
-    </main>
-  );
+			<div className="container">
+				<Example />
+				<hr className="border-slate-200" />
+				<Example2 />
+				<hr className="border-slate-200" />
+				<Section5 />
+				<hr className="border-slate-200" />
+				<Section6 />
+			</div>
+		</main>
+	)
 }

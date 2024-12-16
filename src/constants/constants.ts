@@ -2,7 +2,7 @@ const CONSTANTS_NEXT = {
   purchaseUrl:
     "https://themeforest.net/item/chisfis-online-booking-nextjs-template/43399526",
   liveDemoUrl: "https://chisfis-nextjs.vercel.app/",
-  supportUrl: "https://help.chisnghiax.com/",
+  supportUrl: "https://support.booliitheme.com/",
   documentationUrl: "https://nghiaxchis.gitbook.io/chisfis-nextjs-template/",
   socials: {
     facebookUrl: "https://www.facebook.com/",
@@ -17,7 +17,7 @@ const CONSTANTS_REACT = {
   purchaseUrl:
     "https://themeforest.net/item/chisfis-online-booking-react-template/33515927",
   liveDemoUrl: "https://chisfis-template.vercel.app/",
-  supportUrl: "https://help.chisnghiax.com/",
+  supportUrl: "https://support.booliitheme.com/",
   documentationUrl: "https://nghiaxchis.gitbook.io/chisfis-react-template/",
   socials: {
     facebookUrl: "https://www.facebook.com/",
@@ -33,4 +33,4 @@ const CONSTANTS =
     ? CONSTANTS_NEXT
     : CONSTANTS_REACT;
 
-export { CONSTANTS };
+export { CONSTANTS_NEXT as CONSTANTS };
