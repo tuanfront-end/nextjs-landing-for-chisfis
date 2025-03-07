@@ -3,7 +3,7 @@ import './globals.css'
 export const metadata = {
 	title: 'Chisfis - Online booking Nextjs template',
 	description:
-		'Chisfis is a Next.js 14, typescript and tailwindcss template, a perfect starting point for your next Booking online and Real Estate site. Stay, Hotel, Car, Experiences, Real Estate, Flight, Property, Travel, Tour...',
+		'Chisfis is a Next.js 14, TypeScript and Tailwind CSS template, a perfect starting point for your next Booking online and Real Estate site. Stay, Hotel, Car, Experiences, Real Estate, Flight, Property, Travel, Tour...',
 }
 
 export default function RootLayout({

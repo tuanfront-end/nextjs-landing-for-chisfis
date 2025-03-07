@@ -12,28 +12,19 @@ export const SectionDemos = () => {
 			img: home1,
 			text: 'Home 1',
 			subText: 'Home default',
-			link:
-				process.env.NEXT_PUBLIC_FRAMEWORK === 'next'
-					? 'https://chisfis-nextjs.vercel.app/'
-					: 'https://chisfis-template.vercel.app/',
+			link: 'https://chisfis-nextjs.vercel.app/',
 		},
 		{
 			img: home2,
 			text: 'Home 2',
 			subText: 'Real Estate',
-			link:
-				process.env.NEXT_PUBLIC_FRAMEWORK === 'next'
-					? 'https://chisfis-nextjs.vercel.app/home-2'
-					: 'https://chisfis-template.vercel.app/home-2',
+			link: 'https://chisfis-nextjs.vercel.app/home-2',
 		},
 		{
 			img: home3,
 			text: 'Home 3',
 			subText: 'Home demo',
-			link:
-				process.env.NEXT_PUBLIC_FRAMEWORK === 'next'
-					? 'https://chisfis-nextjs.vercel.app/home-3'
-					: 'https://chisfis-template.vercel.app/home-3',
+			link: 'https://chisfis-nextjs.vercel.app/home-3',
 			tags: [],
 		},
 	]

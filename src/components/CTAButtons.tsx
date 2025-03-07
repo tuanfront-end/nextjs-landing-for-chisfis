@@ -24,7 +24,7 @@ const CTAButtons = ({ className = 'mt-12 ' }: Props) => {
 					rel="noopener noreferrer"
 					className="flex items-center p-3 font-medium"
 				>
-					By theme
+					Buy template
 					<ArrowRightIcon className="ml-1 h-5 w-5" />
 				</a>
 			</div>

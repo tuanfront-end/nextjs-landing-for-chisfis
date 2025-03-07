@@ -9,7 +9,7 @@ const Section1 = () => {
 					Travel Shopping <br /> Next.js template 🏠
 				</h2>
 				<p className="mx-auto mt-8 text-pretty text-base font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
-					Chisfis is a Next.js 14, typescript and tailwindcss template, a
+					Chisfis is a Next.js 14, TypeScript and Tailwind CSS template, a
 					perfect starting point for your next Booking online and Real Estate
 					site. Stay, Hotel, Car, Experiences, Real Estate, Flight, Property,
 					Travel, Tour...

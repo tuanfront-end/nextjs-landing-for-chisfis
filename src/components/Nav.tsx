@@ -26,7 +26,7 @@ export const Nav = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Helps
+						Help
 					</a>
 					<a
 						href={CONSTANTS.liveDemoUrl}

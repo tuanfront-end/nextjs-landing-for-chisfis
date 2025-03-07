@@ -12,7 +12,7 @@ const Section6 = () => {
 					BooliiTheme<span className="text-indigo-600">.</span>
 				</a>
 				<p className="mt-4 text-sm text-gray-500 sm:ml-4 sm:mt-0 sm:border-l sm:border-gray-700 sm:pl-4">
-					© 2024 Booliitheme
+					© 2025 Booliitheme
 				</p>
 				<span className="mt-4 inline-flex justify-center space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
 					<a
