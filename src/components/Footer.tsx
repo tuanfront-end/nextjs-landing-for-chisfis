@@ -26,7 +26,7 @@ export function Footer() {
               </svg>
             </Link>
           </div>
-          <p className="mt-6 text-sm text-slate-500 sm:mt-0">
+          <p className="mt-6 text-center text-sm text-slate-500 sm:mt-0 sm:text-left">
             Copyright &copy; {new Date().getFullYear()} BooliiTheme. All rights
             reserved.
           </p>

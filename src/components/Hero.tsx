@@ -13,7 +13,7 @@ import { buyNowLink, demoLink } from '@/constant'
 
 export function Hero() {
   return (
-    <Container className="pt-16 pb-16 text-center sm:pt-20 lg:pt-24 2xl:pt-28">
+    <Container className="overflow-hidden pt-16 pb-16 text-center sm:pt-20 lg:pt-24 2xl:pt-28">
       <div className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-1.5 text-sm font-medium ring-1 ring-gray-500/10 ring-inset">
         <SparklesIcon className="-ml-1.5 size-5 text-blue-500" />
         <span className="text-gray-700">Big update 2.0 has arrived!</span>
