@@ -1,19 +1,45 @@
-import './globals.css'
+import { type Metadata } from 'next'
+import { Inter, Lexend } from 'next/font/google'
+import clsx from 'clsx'
 
-export const metadata = {
-	title: 'Chisfis - Online booking Nextjs template',
-	description:
-		'Chisfis is a Next.js 14, TypeScript and Tailwind CSS template, a perfect starting point for your next Booking online and Real Estate site. Stay, Hotel, Car, Experiences, Real Estate, Flight, Property, Travel, Tour...',
+import '@/styles/tailwind.css'
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s - Chisfis',
+    default: 'Chisfis - Online booking Next.js Tailwind CSS template',
+  },
+  description:
+    'Chisfis is a modern, clean and fully responsive Next.js Tailwind CSS template for booking websites.',
 }
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const lexend = Lexend({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-lexend',
+})
+
 export default function RootLayout({
-	children,
+  children,
 }: {
-	children: React.ReactNode
+  children: React.ReactNode
 }) {
-	return (
-		<html lang="en">
-			<body>{children}</body>
-		</html>
-	)
+  return (
+    <html
+      lang="en"
+      className={clsx(
+        'h-full scroll-smooth bg-white antialiased',
+        inter.variable,
+        lexend.variable,
+      )}
+    >
+      <body className="flex h-full flex-col">{children}</body>
+    </html>
+  )
 }
