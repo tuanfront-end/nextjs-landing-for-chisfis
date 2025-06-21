@@ -8,22 +8,29 @@ import {
   PopoverPanel,
 } from '@headlessui/react'
 import clsx from 'clsx'
-
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid'
+import { buyNowLink, changelogLink, demoLink } from '@/constant'
 
 function MobileNavLink({
   href,
   children,
+  target,
 }: {
   href: string
   children: React.ReactNode
+  target?: string
 }) {
   return (
-    <PopoverButton as={Link} href={href} className="block w-full p-2">
+    <PopoverButton
+      as={Link}
+      href={href}
+      className="block w-full p-2"
+      target={target}
+    >
       {children}
     </PopoverButton>
   )
@@ -75,9 +82,13 @@ function MobileNavigation() {
       >
         <MobileNavLink href="#demos">Pre-built demos</MobileNavLink>
         <MobileNavLink href="#features">Features</MobileNavLink>
-        <MobileNavLink href="#docs">Changelog</MobileNavLink>
+        <MobileNavLink href={changelogLink} target="_blank">
+          Changelog
+        </MobileNavLink>
         <hr className="m-2 border-slate-300/40" />
-        <MobileNavLink href="/#">Buy now</MobileNavLink>
+        <MobileNavLink href={buyNowLink} target="_blank">
+          Buy now
+        </MobileNavLink>
       </PopoverPanel>
     </Popover>
   )
@@ -93,16 +104,25 @@ export function Header() {
               <Logo className="h-12 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-3">
-              <NavLink href="#demos">Pre-built demos</NavLink>
+              <NavLink href="#demos">Demo pages</NavLink>
               <NavLink href="#features">Features</NavLink>
-              <NavLink href="#docs">Changelog</NavLink>
+              <NavLink target="_blank" href={changelogLink}>
+                Changelog
+              </NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-2 md:gap-x-6">
             <div className="hidden md:block">
-              <NavLink href="/#">Buy now</NavLink>
+              <NavLink target="_blank" href={buyNowLink}>
+                Buy now
+              </NavLink>
             </div>
-            <Button href="/#" color="blue" className="px-4! py-2! text-sm!">
+            <Button
+              href={demoLink}
+              color="blue"
+              className="px-4! py-2! text-sm!"
+              target="_blank"
+            >
               View demo
               <ArrowUpRightIcon className="ml-2 h-4 w-4" />
             </Button>

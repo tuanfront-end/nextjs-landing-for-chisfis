@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Container } from '@/components/Container'
-import { ArrowUpRightIcon } from '@heroicons/react/24/solid'
+import { ArrowRightIcon, ArrowUpRightIcon } from '@heroicons/react/24/solid'
 import homestayImg from '@/images/home/hotel.png'
 import carImg from '@/images/home/car.png'
 import experienceImg from '@/images/home/experience.png'
@@ -9,46 +9,39 @@ import flightImg from '@/images/home/flight.png'
 import home2Img from '@/images/home/home-2.png'
 import Link from 'next/link'
 import { Button } from './Button'
+import { demoLink } from '@/constant'
 
 const homeDemos = [
   {
     img: homestayImg,
-    text: 'Homestay',
-    subText: 'Homestay',
+    text: 'Homestay booking',
     link: 'https://chisfis-nextjs.vercel.app/',
   },
   {
     img: realestateImg,
-    text: 'Real Estate',
-    subText: 'Real Estate',
-    link: 'https://chisfis-nextjs.vercel.app/',
+    text: 'Real estate',
+    link: 'https://chisfis-nextjs.vercel.app/real-estate',
   },
   {
     img: carImg,
-    text: 'Car Rental',
-    subText: 'Car Rental',
-    link: 'https://chisfis-nextjs.vercel.app/home-2',
+    text: 'Car rental',
+    link: 'https://chisfis-nextjs.vercel.app/car',
   },
   {
     img: experienceImg,
-    text: 'Experience',
-    subText: 'Experience',
-    link: 'https://chisfis-nextjs.vercel.app/home-3',
-    tags: [],
+    text: 'Experience booking',
+    link: 'https://chisfis-nextjs.vercel.app/experience',
   },
 
   {
     img: flightImg,
-    text: 'Flight',
-    subText: 'Flight',
-    link: 'https://chisfis-nextjs.vercel.app/home-2',
+    text: 'Flight booking',
+    link: 'https://chisfis-nextjs.vercel.app/flight-categories/all',
   },
   {
     img: home2Img,
-    text: 'Home 2',
-    subText: 'Home 2',
-    link: 'https://chisfis-nextjs.vercel.app/home-3',
-    tags: [],
+    text: 'Home page 2',
+    link: 'https://chisfis-nextjs.vercel.app/home-2',
   },
 ]
 
@@ -90,44 +83,44 @@ export function SectionShowcase() {
           </p>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-x-7 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-20 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
           {homeDemos.map((item, index) => (
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href={item.link}
-              key={index}
-              className="group flex flex-col"
-            >
-              <div className="rounded-2xl bg-blue-600 p-2">
-                <div className="relative aspect-14/16 w-full">
-                  <Image
-                    src={item.img}
-                    alt={item.text}
-                    className="rounded-xl object-cover object-top brightness-100 transition-all duration-300 group-hover:brightness-75"
-                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                    fill
-                    priority
-                  />
+            <div key={index} className="group relative flex flex-col">
+              <div className="relative aspect-14/16 w-full overflow-hidden rounded-3xl border-8 border-indigo-100">
+                <Image
+                  src={item.img}
+                  alt={item.text}
+                  className="rounded-xl object-cover object-top brightness-100 transition-all duration-300 group-hover:brightness-75"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  fill
+                  priority
+                />
 
-                  <div className="absolute top-1/2 left-1/2 flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-slate-900 text-slate-100 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                    <ArrowUpRightIcon className="h-6 w-6" />
-                  </div>
+                <div className="absolute top-1/2 left-1/2 flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-slate-900 text-slate-100 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                  <ArrowUpRightIcon className="h-6 w-6" />
                 </div>
               </div>
 
-              <div className="mt-4 flex items-center justify-between gap-2 px-2">
-                <h3 className="text-2xl font-bold tracking-tight">
+              <div className="mt-4 flex items-center gap-4 px-2">
+                <h3 className="relative text-base font-semibold tracking-tight before:absolute before:top-full before:left-0 before:mt-1.5 before:block before:h-1 before:w-full before:rounded-full before:bg-yellow-200/80">
                   {item.text}
                 </h3>
-                <ArrowUpRightIcon className="size-6" />
+                <ArrowRightIcon className="size-5" />
               </div>
-            </Link>
+
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href={item.link}
+                key={index}
+                className="absolute inset-0"
+              />
+            </div>
           ))}
         </div>
 
         <div className="mt-20 flex justify-center">
-          <Button href="/#" color="slate">
+          <Button href={demoLink} target="_blank" color="slate">
             View more pages
             <ArrowUpRightIcon className="ml-2 h-4 w-4" />
           </Button>

@@ -3,9 +3,9 @@ import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import SectionBuilt from '@/components/SectionBuilt'
 import SectionIncluded from '@/components/SectionIncluded'
-import Section5 from '@/components/Section5'
 import { Container } from '@/components/Container'
 import { SectionShowcase } from '@/components/SectionShowcase'
+import SectionCTA from '@/components/SectionCTA'
 
 export default function Home() {
   return (
@@ -42,11 +42,7 @@ export default function Home() {
         <Container>
           <hr className="border-slate-200" />
         </Container>
-        <SectionBuilt />
-        <Container>
-          <hr className="border-slate-200" />
-        </Container>
-        <Section5 />
+        <SectionCTA />
       </main>
       <Footer />
     </div>

@@ -8,11 +8,17 @@ import logoFigma from '@/images/logos/figma.svg'
 import logoTypescript from '@/images/logos/typescript.svg'
 import logoNextjs from '@/images/logos/nextjs.svg'
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid'
+import { SparklesIcon } from '@heroicons/react/24/outline'
+import { buyNowLink, demoLink } from '@/constant'
 
 export function Hero() {
   return (
-    <Container className="pt-16 pb-16 text-center sm:pt-20 lg:pt-32">
-      <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
+    <Container className="pt-16 pb-16 text-center sm:pt-20 lg:pt-24 2xl:pt-28">
+      <div className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-1.5 text-sm font-medium ring-1 ring-gray-500/10 ring-inset">
+        <SparklesIcon className="-ml-1.5 size-5 text-blue-500" />
+        <span className="text-gray-700">Big update 2.0 has arrived!</span>
+      </div>
+      <h1 className="mx-auto mt-2 max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         Modern{' '}
         <span className="relative whitespace-nowrap text-blue-600">
           <svg
@@ -32,16 +38,21 @@ export function Hero() {
         booking websites, homestay, flight booking, car rentals, experience, and
         real estate booking.
       </p>
-      <div className="mt-12 flex flex-wrap justify-center gap-4 sm:gap-x-6">
-        <Button href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+      <div className="mt-12 flex flex-wrap justify-center gap-4 sm:gap-x-5">
+        <Button href={demoLink} target="_blank">
           View demo
           <ArrowUpRightIcon className="ml-2 h-4 w-4" />
         </Button>
-        <Button href="/#" variant="outline" className="sm:px-7">
+        <Button
+          href={buyNowLink}
+          variant="outline"
+          className="sm:px-7"
+          target="_blank"
+        >
           Buy now
         </Button>
       </div>
-      <div className="mt-36 2xl:mt-40">
+      <div className="mt-32 2xl:mt-36">
         <p className="font-display text-base text-slate-900">
           Built on the most modern technologies
         </p>

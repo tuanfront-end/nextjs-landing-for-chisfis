@@ -3,24 +3,34 @@ import { Container } from './Container'
 
 const features = [
   {
-    name: 'Built with Next.js',
+    name: 'Built with Next.js 15',
     description:
-      'Chisfis is a well-structured, thoughtfully componentized Next.js project, giving you a codebase that’s productive and enjoyable to work in.',
+      'Chisfis is a well-structured, thoughtfully componentized Next.js 15 project, giving you a codebase that’s productive and enjoyable to work in.',
   },
   {
-    name: 'TypeScript',
+    name: 'TypeScript 5',
     description:
-      'Authored with the latest version of TypeScript by nerds who get way too much satisfaction out of getting the types just right, giving you the best possible developer experience. ',
+      'Authored with the latest version of TypeScript by nerds who get way too much satisfaction out of getting the types just right, giving you the best possible developer experience.',
+  },
+  {
+    name: 'Tailwind CSS 4',
+    description:
+      'You can trust that all the code follows Tailwind CSS best practices. Everything is styled with utility classes, directly in the markup. There are no complex configuration variables or CSS to manage.',
+  },
+  {
+    name: 'HeadlessUI React',
+    description:
+      'HeadlessUI React provides excellent components. These components have been carefully designed and developed to be keyboard accessible, ensuring the template provides users with the best possible screen reader experience.',
   },
   {
     name: 'Simple to deploy',
     description:
-      'Production-ready and easily deployed anywhere that you can deploy a Next.js application, like Vercel or Netlify.',
+      'The template is carefully tested and production-ready, making it easy to deploy to any platform that supports Next.js applications, such as Vercel, Netlify, AWS, etc.',
   },
   {
     name: '100% responsive',
     description:
-      'Chisfis is designed to look great on any device, from mobile to desktop and beyond.',
+      'Chisfis is designed to be responsive on all devices, from mobile to desktop. Chisfis is built with the latest Tailwind CSS 4, which is a mobile-first CSS framework.',
   },
   {
     name: 'RTL support',
@@ -45,9 +55,9 @@ export default function SectionIncluded() {
             </h2>
             <p className="mt-6 text-base/7 text-gray-600">
               Chisfis comes with everything you need to get started building a
-              beautiful, modern website. Here are just a few of the features
-              you’ll find in the template that make it a great choice for your
-              next project.
+              beautiful, modern booking websites. Here are just a few of the
+              features you’ll find in the template that make it a great choice
+              for your next project.
             </p>
           </div>
           <dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">

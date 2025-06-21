@@ -1,18 +1,12 @@
-import Link from 'next/link'
+import Link, { LinkProps } from 'next/link'
 
-export function NavLink({
-  href,
-  children,
-}: {
-  href: string
-  children: React.ReactNode
-}) {
+type NavLinkProps = LinkProps & React.ComponentPropsWithoutRef<'a'>
+
+export function NavLink(props: NavLinkProps) {
   return (
     <Link
-      href={href}
       className="inline-block rounded-lg px-3 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
-    >
-      {children}
-    </Link>
+      {...props}
+    />
   )
 }
