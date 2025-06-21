@@ -1,4 +1,5 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
+import { Container } from './Container'
 
 const features = [
   {
@@ -33,15 +34,15 @@ const features = [
   },
 ]
 
-export default function Example() {
+export default function SectionIncluded() {
   return (
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="bg-white py-24 sm:py-32" id="features">
+      <Container>
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <div className="col-span-2">
-            <p className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
               What’s included
-            </p>
+            </h2>
             <p className="mt-6 text-base/7 text-gray-600">
               Chisfis comes with everything you need to get started building a
               beautiful, modern website. Here are just a few of the features
@@ -64,7 +65,7 @@ export default function Example() {
             ))}
           </dl>
         </div>
-      </div>
-    </div>
+      </Container>
+    </section>
   )
 }

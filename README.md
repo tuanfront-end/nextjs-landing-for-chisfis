@@ -1,5 +1,7 @@
 # Landing page for Chisfis
 
+Landing page for - Chisfis Booking online Next.js & Tailwind CSS template.
+
 ## Getting started
 
 To get started with this template, first install the npm dependencies:
