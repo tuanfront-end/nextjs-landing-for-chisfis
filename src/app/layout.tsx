@@ -7,10 +7,10 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - Chisfis',
-    default: 'Chisfis - Online booking Next.js & Tailwind CSS template',
+    default: 'Chisfis - Online travel booking Next.js template',
   },
   description:
-    'Chisfis | Online Booking Next.js template – A responsive Next.js template designed for online booking, listing, real estate, and booking systems for accommodations, tours, travel experiences, cruises, car rentals, and travel agencies. Chisfis is built with the latest Next.js 15 (app directory), TypeScript, and Tailwind CSS 4.',
+    'Chisfis is a responsive Next.js template designed for online booking, listing, real estate, and booking systems for accommodations, tours, travel experiences, cruises, car rentals, and travel agencies.',
 }
 
 const inter = Inter({
