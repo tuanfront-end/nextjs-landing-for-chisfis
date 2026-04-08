@@ -3,9 +3,9 @@ import { Container } from './Container'
 
 const features = [
   {
-    name: 'Built with Next.js 15',
+    name: 'Built with Next.js 16',
     description:
-      'Chisfis is a well-structured, thoughtfully componentized Next.js 15 project, giving you a codebase that’s productive and enjoyable to work in.',
+      'Chisfis is a well-structured, thoughtfully componentized Next.js 16 project, giving you a codebase that’s productive and enjoyable to work in.',
   },
   {
     name: 'TypeScript 5',
@@ -51,12 +51,12 @@ export default function SectionIncluded() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <div className="col-span-2">
             <h2 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
-              What’s included
+              What's included
             </h2>
             <p className="mt-6 text-base/7 text-gray-600">
               Chisfis comes with everything you need to get started building a
               beautiful, modern booking websites. Here are just a few of the
-              features you’ll find in the template that make it a great choice
+              features you'll find in the template that make it a great choice
               for your next project.
             </p>
           </div>

@@ -14,8 +14,18 @@ import { demoLink } from '@/constant'
 const homeDemos = [
   {
     img: homestayImg,
-    text: 'Homestay booking',
+    text: 'Stays',
     link: 'https://chisfis-nextjs.vercel.app/',
+  },
+  {
+    img: carImg,
+    text: 'Car rentals',
+    link: 'https://chisfis-nextjs.vercel.app/car',
+  },
+  {
+    img: experienceImg,
+    text: 'Experiences',
+    link: 'https://chisfis-nextjs.vercel.app/experience',
   },
   {
     img: realestateImg,
@@ -23,24 +33,13 @@ const homeDemos = [
     link: 'https://chisfis-nextjs.vercel.app/real-estate',
   },
   {
-    img: carImg,
-    text: 'Car rental',
-    link: 'https://chisfis-nextjs.vercel.app/car',
-  },
-  {
-    img: experienceImg,
-    text: 'Experience booking',
-    link: 'https://chisfis-nextjs.vercel.app/experience',
-  },
-
-  {
     img: flightImg,
-    text: 'Flight booking',
+    text: 'Flights',
     link: 'https://chisfis-nextjs.vercel.app/flight-categories/all',
   },
   {
     img: home2Img,
-    text: 'Home page 2',
+    text: 'Home 2',
     link: 'https://chisfis-nextjs.vercel.app/home-2',
   },
 ]
@@ -86,7 +85,7 @@ export function SectionShowcase() {
         <div className="mt-20 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
           {homeDemos.map((item, index) => (
             <div key={index} className="group relative flex flex-col">
-              <div className="relative aspect-14/16 w-full overflow-hidden rounded-3xl border-8 border-indigo-100">
+              <div className="relative aspect-14/16 w-full overflow-hidden rounded-3xl border-8 border-zinc-100">
                 <Image
                   src={item.img}
                   alt={item.text}
@@ -112,7 +111,6 @@ export function SectionShowcase() {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={item.link}
-                key={index}
                 className="absolute inset-0"
               />
             </div>

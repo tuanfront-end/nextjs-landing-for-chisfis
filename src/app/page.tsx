@@ -1,7 +1,6 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import SectionBuilt from '@/components/SectionBuilt'
 import SectionIncluded from '@/components/SectionIncluded'
 import { Container } from '@/components/Container'
 import { SectionShowcase } from '@/components/SectionShowcase'
