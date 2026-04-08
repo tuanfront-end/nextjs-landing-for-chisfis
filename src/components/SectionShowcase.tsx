@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Container } from '@/components/Container'
-import { ArrowRightIcon, ArrowUpRightIcon } from '@heroicons/react/24/solid'
+import { ArrowUpRightIcon } from '@heroicons/react/24/solid'
 import homestayImg from '@/images/home/hotel.png'
 import carImg from '@/images/home/car.png'
 import experienceImg from '@/images/home/experience.png'
@@ -12,7 +12,6 @@ import searchImg from '@/images/home/search.png'
 import Link from 'next/link'
 import { Button } from './Button'
 import { demoLink, demoLinkRTL } from '@/constant'
-import clsx from 'clsx'
 import { ChevronDoubleRightIcon } from '@heroicons/react/24/outline'
 
 const homeDemos = [
@@ -98,19 +97,13 @@ export function SectionShowcase() {
 
         <div className="mt-20 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
           {homeDemos.map((item, index) => (
-            <div
-              key={index}
-              className={clsx(
-                index === 0 && 'col-spdan-2',
-                'group relative flex flex-col',
-              )}
-            >
+            <div key={index} className={'group relative flex flex-col'}>
               <div className="relative w-full border-indigo-100">
                 <Image
                   src={item.img}
                   alt={item.text}
                   className="rounded-xl object-cover object-top brightness-100 transition-all duration-300 group-hover:brightness-80"
-                  sizes={`(max-width: 640px) 100vw, (max-width: 768px) 100vw, ${index === 0 ? '100vw' : '33vw'}`}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
                   priority
                 />
 
@@ -130,7 +123,6 @@ export function SectionShowcase() {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={item.link}
-                key={index}
                 className="absolute inset-0"
               />
             </div>
