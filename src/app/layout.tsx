@@ -7,7 +7,7 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - Ceepii',
-    default: 'Ceepii - Travel Booking Next.js & Tailwind CSS template',
+    default: 'Ceepii - Travel Booking Next.js template',
   },
   description:
     'Ceepii is a premium Next.js template for building modern booking platforms like Airbnb and Booking.com, combining high-end UI with a scalable frontend to help you launch faster.',
