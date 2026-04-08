@@ -75,7 +75,7 @@ export function Hero() {
                 src={company.logo}
                 alt={company.name}
                 unoptimized
-                className="w-6 object-contain sm:size-8"
+                className="h-6 w-auto sm:h-8"
               />
             </li>
           ))}

@@ -62,7 +62,7 @@ export function SectionShowcase() {
     <section className="relative bg-slate-50 pt-20 pb-28 sm:py-32" id="demos">
       <svg
         aria-hidden="true"
-        className="absolute inset-0 right-0 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-black opacity-70"
+        className="absolute inset-0 right-0 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-zinc-200 opacity-60"
       >
         <defs>
           <pattern
