@@ -1,5 +1,6 @@
 export const buyNowLink =
-  'https://themeforest.net/item/chisfis-online-booking-nextjs-template/43399526'
-export const demoLink = 'https://chisfis-nextjs.vercel.app/'
+  'https://themeforest.net/item/ceepii-travel-booking-nextjs-template/62406370'
+export const demoLink = 'https://ceepii-nextjs-template.vercel.app/'
+export const demoLinkRTL = 'https://ceepii-nextjs-template-rtl.vercel.app/'
 export const changelogLink =
-  'https://nghiaxchis.gitbook.io/chisfis-nextjs-template/change-log/change-log'
+  'https://nghiaxchis.gitbook.io/ceepii-nextjs-booking-online-template/change-log/change-log'

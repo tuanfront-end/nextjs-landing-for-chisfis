@@ -1,6 +1,6 @@
-# Landing page for Chisfis
+# Landing page for Ceepii
 
-Landing page for - Chisfis Booking online Next.js & Tailwind CSS template.
+Landing page for - Ceepii Booking online Next.js & Tailwind CSS template.
 
 ## Getting started
 

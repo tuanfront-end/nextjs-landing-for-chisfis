@@ -80,14 +80,14 @@ function MobileNavigation() {
         transition
         className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 data-closed:scale-95 data-closed:opacity-0 data-enter:duration-150 data-enter:ease-out data-leave:duration-100 data-leave:ease-in"
       >
-        <MobileNavLink href="#demos">Pre-built demos</MobileNavLink>
+        <MobileNavLink href="#demos">30+ Pages</MobileNavLink>
         <MobileNavLink href="#features">Features</MobileNavLink>
         <MobileNavLink href={changelogLink} target="_blank">
           Changelog
         </MobileNavLink>
         <hr className="m-2 border-slate-300/40" />
         <MobileNavLink href={buyNowLink} target="_blank">
-          Buy now
+          Buy template
         </MobileNavLink>
       </PopoverPanel>
     </Popover>
@@ -101,10 +101,10 @@ export function Header() {
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="#" aria-label="Home">
-              <Logo className="h-12 w-auto" />
+              <Logo className="h-10 w-auto sm:h-12" />
             </Link>
             <div className="hidden md:flex md:gap-x-3">
-              <NavLink href="#demos">Demo pages</NavLink>
+              <NavLink href="#demos">30+ Pages</NavLink>
               <NavLink href="#features">Features</NavLink>
               <NavLink target="_blank" href={changelogLink}>
                 Changelog

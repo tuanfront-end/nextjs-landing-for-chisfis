@@ -1,28 +1,23 @@
 import { type Metadata } from 'next'
-import { Inter, Lexend } from 'next/font/google'
+import { Google_Sans_Flex, Playfair_Display } from 'next/font/google'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Chisfis',
-    default: 'Chisfis - Online booking Next.js & Tailwind CSS template',
+    template: '%s - Ceepii',
+    default: 'Ceepii - Travel Booking Next.js & Tailwind CSS template',
   },
   description:
-    'Chisfis | Online Booking Next.js template – A responsive Next.js template designed for online booking, listing, real estate, and booking systems for accommodations, tours, travel experiences, cruises, car rentals, and travel agencies. Chisfis is built with the latest Next.js 15 (app directory), TypeScript, and Tailwind CSS 4.',
+    'Ceepii is a premium Next.js template for building modern booking platforms like Airbnb and Booking.com, combining high-end UI with a scalable frontend to help you launch faster.',
 }
 
-const inter = Inter({
+const googleSansFlex = Google_Sans_Flex({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
-})
-
-const lexend = Lexend({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-lexend',
+  weight: 'variable',
+  variable: '--font-sans',
 })
 
 export default function RootLayout({
@@ -34,9 +29,8 @@ export default function RootLayout({
     <html
       lang="en"
       className={clsx(
-        'h-full scroll-smooth bg-white antialiased',
-        inter.variable,
-        lexend.variable,
+        googleSansFlex.variable,
+        'h-full scroll-smooth bg-white font-sans antialiased',
       )}
     >
       <body className="flex h-full flex-col">{children}</body>

@@ -3,9 +3,9 @@ import { Container } from './Container'
 
 const features = [
   {
-    name: 'Built with Next.js 15',
+    name: 'Built with Next.js 16',
     description:
-      'Chisfis is a well-structured, thoughtfully componentized Next.js 15 project, giving you a codebase that’s productive and enjoyable to work in.',
+      "Ceepii is a well-structured, thoughtfully componentized Next.js 16 project, giving you a codebase that's productive and enjoyable to work in.",
   },
   {
     name: 'TypeScript 5',
@@ -18,9 +18,9 @@ const features = [
       'You can trust that all the code follows Tailwind CSS best practices. Everything is styled with utility classes, directly in the markup. There are no complex configuration variables or CSS to manage.',
   },
   {
-    name: 'HeadlessUI React',
+    name: 'Shadcn UI',
     description:
-      'HeadlessUI React provides excellent components. These components have been carefully designed and developed to be keyboard accessible, ensuring the template provides users with the best possible screen reader experience.',
+      'You can effortlessly customize your theme while seamlessly scaling your project with the powerful component system from Shadcn.',
   },
   {
     name: 'Simple to deploy',
@@ -30,17 +30,17 @@ const features = [
   {
     name: '100% responsive',
     description:
-      'Chisfis is designed to be responsive on all devices, from mobile to desktop. Chisfis is built with the latest Tailwind CSS 4, which is a mobile-first CSS framework.',
+      'Ceepii is designed to be responsive on all devices, from mobile to desktop. Ceepii is built with the latest Tailwind CSS 4, which is a mobile-first CSS framework.',
   },
   {
     name: 'RTL support',
     description:
-      'Chisfis supports right-to-left languages out of the box, so you can easily localize your site for a global audience.',
+      'Ceepii supports right-to-left languages out of the box, so you can easily localize your site for a global audience.',
   },
   {
     name: 'Easy to customize',
     description:
-      'Chisfis is designed to be easy to customize to your liking, with a well-organized file structure and clean code.',
+      'Ceepii is designed to be easy to customize to your liking, with a well-organized file structure and clean code.',
   },
 ]
 
@@ -51,13 +51,13 @@ export default function SectionIncluded() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <div className="col-span-2">
             <h2 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
-              What’s included
+              What&apos;s included
             </h2>
             <p className="mt-6 text-base/7 text-gray-600">
-              Chisfis comes with everything you need to get started building a
+              Ceepii comes with everything you need to get started building a
               beautiful, modern booking websites. Here are just a few of the
-              features you’ll find in the template that make it a great choice
-              for your next project.
+              features you&apos;ll find in the template that make it a great
+              choice for your next project.
             </p>
           </div>
           <dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">

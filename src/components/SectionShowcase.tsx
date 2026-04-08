@@ -4,44 +4,57 @@ import { ArrowRightIcon, ArrowUpRightIcon } from '@heroicons/react/24/solid'
 import homestayImg from '@/images/home/hotel.png'
 import carImg from '@/images/home/car.png'
 import experienceImg from '@/images/home/experience.png'
-import realestateImg from '@/images/home/realestate.png'
+import homeImg from '@/images/home/home.png'
+import homeRTLImg from '@/images/home/home-rtl.png'
 import flightImg from '@/images/home/flight.png'
-import home2Img from '@/images/home/home-2.png'
+import searchWithMapImg from '@/images/home/search-with-map.png'
+import searchImg from '@/images/home/search.png'
 import Link from 'next/link'
 import { Button } from './Button'
-import { demoLink } from '@/constant'
+import { demoLink, demoLinkRTL } from '@/constant'
+import clsx from 'clsx'
+import { ChevronDoubleRightIcon } from '@heroicons/react/24/outline'
 
 const homeDemos = [
   {
-    img: homestayImg,
-    text: 'Homestay booking',
-    link: 'https://chisfis-nextjs.vercel.app/',
+    img: homeImg,
+    text: 'Home',
+    link: demoLink,
   },
   {
-    img: realestateImg,
-    text: 'Real estate',
-    link: 'https://chisfis-nextjs.vercel.app/real-estate',
+    img: homeRTLImg,
+    text: 'Home (RTL)',
+    link: demoLinkRTL,
+  },
+  {
+    img: homestayImg,
+    text: 'Stays',
+    link: demoLink + 'stay',
   },
   {
     img: carImg,
-    text: 'Car rental',
-    link: 'https://chisfis-nextjs.vercel.app/car',
+    text: 'Car rentals',
+    link: demoLink + 'car',
   },
   {
     img: experienceImg,
-    text: 'Experience booking',
-    link: 'https://chisfis-nextjs.vercel.app/experience',
+    text: 'Experiences',
+    link: demoLink + 'experience',
   },
-
   {
     img: flightImg,
-    text: 'Flight booking',
-    link: 'https://chisfis-nextjs.vercel.app/flight-categories/all',
+    text: 'Flights',
+    link: demoLink + 'flight',
   },
   {
-    img: home2Img,
-    text: 'Home page 2',
-    link: 'https://chisfis-nextjs.vercel.app/home-2',
+    img: searchWithMapImg,
+    text: 'Search with map',
+    link: demoLink + 'stay-search-with-map',
+  },
+  {
+    img: searchImg,
+    text: 'Search',
+    link: demoLink + 'stay-search',
   },
 ]
 
@@ -74,25 +87,30 @@ export function SectionShowcase() {
 
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl font-medium tracking-tight sm:text-4xl md:text-5xl">
-            Explore pre-built home pages.
+          <h2 className="font-display text-4xl font-medium tracking-tight md:text-5xl">
+            30+ pages
           </h2>
           <p className="mt-6 text-xl tracking-tight">
-            Full suite of pages for hotel, homestay, flight, car rental,
-            experience, and property booking websites.
+            Full suite of pages for hotel, homestay, experience , car rental,
+            and flight booking websites.
           </p>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-20 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
           {homeDemos.map((item, index) => (
-            <div key={index} className="group relative flex flex-col">
-              <div className="relative aspect-14/16 w-full overflow-hidden rounded-3xl border-8 border-indigo-100">
+            <div
+              key={index}
+              className={clsx(
+                index === 0 && 'col-spdan-2',
+                'group relative flex flex-col',
+              )}
+            >
+              <div className="relative w-full border-indigo-100">
                 <Image
                   src={item.img}
                   alt={item.text}
-                  className="rounded-xl object-cover object-top brightness-100 transition-all duration-300 group-hover:brightness-75"
-                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                  fill
+                  className="rounded-xl object-cover object-top brightness-100 transition-all duration-300 group-hover:brightness-80"
+                  sizes={`(max-width: 640px) 100vw, (max-width: 768px) 100vw, ${index === 0 ? '100vw' : '33vw'}`}
                   priority
                 />
 
@@ -101,11 +119,11 @@ export function SectionShowcase() {
                 </div>
               </div>
 
-              <div className="mt-4 flex items-center gap-4 px-2">
-                <h3 className="relative text-base font-semibold tracking-tight before:absolute before:top-full before:left-0 before:mt-1.5 before:block before:h-1 before:w-full before:rounded-full before:bg-yellow-200/80">
+              <div className="mt-4 flex items-center gap-2.5 px-2">
+                <h3 className="relative text-base font-semibold tracking-tight before:absolute before:top-full before:left-0 before:mt-1.5 before:block before:h-1 before:w-full before:rounded-full before:bg-fuchsia-200/80">
                   {item.text}
                 </h3>
-                <ArrowRightIcon className="size-5" />
+                <ChevronDoubleRightIcon className="size-4" />
               </div>
 
               <Link
