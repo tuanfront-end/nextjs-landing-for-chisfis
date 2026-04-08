@@ -49,7 +49,7 @@ export function SectionShowcase() {
     <section className="relative bg-slate-50 pt-20 pb-28 sm:py-32" id="demos">
       <svg
         aria-hidden="true"
-        className="absolute inset-0 right-0 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-black opacity-70"
+        className="absolute inset-0 right-0 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-zinc-200 opacity-60"
       >
         <defs>
           <pattern
@@ -74,7 +74,7 @@ export function SectionShowcase() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl font-medium tracking-tight sm:text-4xl md:text-5xl">
-            Explore pre-built home pages.
+            30+ Pages
           </h2>
           <p className="mt-6 text-xl tracking-tight">
             Full suite of pages for hotel, homestay, flight, car rental,

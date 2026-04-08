@@ -11,7 +11,7 @@ export default function Home() {
     <div className="relative isolate bg-white">
       <svg
         aria-hidden="true"
-        className="absolute inset-0 right-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200 opacity-70"
+        className="absolute inset-0 right-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-zinc-200 opacity-50"
       >
         <defs>
           <pattern
