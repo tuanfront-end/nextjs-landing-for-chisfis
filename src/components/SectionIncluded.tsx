@@ -3,44 +3,44 @@ import { Container } from './Container'
 
 const features = [
   {
-    name: 'Built with Next.js 16',
+    name: 'Next.js 16 and React 19',
     description:
-      'Chisfis is a well-structured, thoughtfully componentized Next.js 16 project, giving you a codebase that’s productive and enjoyable to work in.',
+      'The App Router, with every page prerendered at build time. Demo content lives in plain TypeScript arrays under src/data, each behind an async getter you can swap for a real fetch.',
   },
   {
-    name: 'TypeScript 5',
+    name: 'An HTML edition',
     description:
-      'Authored with the latest version of TypeScript by nerds who get way too much satisfaction out of getting the types just right, giving you the best possible developer experience.',
+      'The same pages as static .html files, styled with Tailwind CSS 4, made interactive with Alpine.js 3 and built with Vite. For projects that have no place for React.',
   },
   {
-    name: 'Tailwind CSS 4',
+    name: 'Tailwind CSS 4 and TypeScript',
     description:
-      'You can trust that all the code follows Tailwind CSS best practices. Everything is styled with utility classes, directly in the markup. There are no complex configuration variables or CSS to manage.',
+      'Colours and type are tokens in one @theme block. Change the primary scale there and every component follows; nothing hardcodes a hex value.',
   },
   {
-    name: 'HeadlessUI React',
+    name: 'Keyboard and screen readers',
     description:
-      'HeadlessUI React provides excellent components. These components have been carefully designed and developed to be keyboard accessible, ensuring the template provides users with the best possible screen reader experience.',
+      'Focus rings on every control, dialogs with names, fields that announce when they are invalid, and photos described by the listing they belong to.',
   },
   {
-    name: 'Simple to deploy',
+    name: 'Static by default',
     description:
-      'The template is carefully tested and production-ready, making it easy to deploy to any platform that supports Next.js applications, such as Vercel, Netlify, AWS, etc.',
+      'No backend and no database. Every dynamic route refuses unknown paths, so the site deploys as static files to Vercel, Netlify, Cloudflare Pages or Amplify.',
   },
   {
-    name: '100% responsive',
+    name: 'Search engines and sharing',
     description:
-      'Chisfis is designed to be responsive on all devices, from mobile to desktop. Chisfis is built with the latest Tailwind CSS 4, which is a mobile-first CSS framework.',
+      'Each page names its own canonical address and share title, every page has a share image, and the sitemap and structured data are generated for you.',
   },
   {
-    name: 'RTL support',
+    name: 'Right-to-left and dark mode',
     description:
-      'Chisfis supports right-to-left languages out of the box, so you can easily localize your site for a global audience.',
+      'One environment variable mirrors the layout for right-to-left languages, and a toggle in the header switches every page to dark.',
   },
   {
-    name: 'Easy to customize',
+    name: 'Responsive, down to the booking bar',
     description:
-      'Chisfis is designed to be easy to customize to your liking, with a well-organized file structure and clean code.',
+      'On a phone, a bar along the bottom of every listing holds the price and the next step, and tables such as an itinerary turn into lists.',
   },
 ]
 
@@ -50,14 +50,13 @@ export default function SectionIncluded() {
       <Container>
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <div className="col-span-2">
-            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-balance text-gray-900 sm:text-4xl">
               What's included
             </h2>
-            <p className="mt-6 text-base/7 text-gray-600">
-              Chisfis comes with everything you need to get started building a
-              beautiful, modern booking websites. Here are just a few of the
-              features you'll find in the template that make it a great choice
-              for your next project.
+            <p className="mt-6 text-base/7 text-pretty text-gray-600">
+              Two editions of the same booking site, written to be read and
+              changed. The README covers setup, customising and deploying, and a
+              changelog tells you what moved in each release.
             </p>
           </div>
           <dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
@@ -66,7 +65,7 @@ export default function SectionIncluded() {
                 <dt className="font-semibold text-gray-900">
                   <CheckIcon
                     aria-hidden="true"
-                    className="absolute top-1 left-0 size-5 text-indigo-500"
+                    className="absolute top-1 left-0 size-5 text-blue-600"
                   />
                   {feature.name}
                 </dt>

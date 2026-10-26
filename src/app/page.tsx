@@ -5,6 +5,7 @@ import SectionIncluded from '@/components/SectionIncluded'
 import { Container } from '@/components/Container'
 import { SectionShowcase } from '@/components/SectionShowcase'
 import SectionCTA from '@/components/SectionCTA'
+import { SectionWhatsNew } from '@/components/SectionWhatsNew'
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
 
       <main>
         <Hero />
+        <SectionWhatsNew />
         <SectionShowcase />
         <SectionIncluded />
         <Container>

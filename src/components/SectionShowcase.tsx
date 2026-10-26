@@ -73,12 +73,13 @@ export function SectionShowcase() {
 
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl font-medium tracking-tight sm:text-4xl md:text-5xl">
-            30+ Pages
+          <h2 className="font-display text-3xl font-medium tracking-tight text-balance sm:text-4xl md:text-5xl">
+            45 page templates
           </h2>
-          <p className="mt-6 text-xl tracking-tight">
-            Full suite of pages for hotel, homestay, flight, car rental,
-            experience, and property booking websites.
+          <p className="mt-6 text-xl tracking-tight text-balance md:mx-auto md:max-w-3xl">
+            Five home pages, results with and without a map, listing pages,
+            checkout, a ten-step add-listing flow, account, blog and sign-in. In
+            both editions.
           </p>
         </div>
 
@@ -88,11 +89,10 @@ export function SectionShowcase() {
               <div className="relative aspect-14/16 w-full overflow-hidden rounded-3xl border-8 border-zinc-100">
                 <Image
                   src={item.img}
-                  alt={item.text}
+                  alt={`${item.text} page of the Chisfis demo`}
                   className="rounded-xl object-cover object-top brightness-100 transition-all duration-300 group-hover:brightness-75"
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                   fill
-                  priority
                 />
 
                 <div className="absolute top-1/2 left-1/2 flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-slate-900 text-slate-100 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
@@ -111,8 +111,10 @@ export function SectionShowcase() {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={item.link}
-                className="absolute inset-0"
-              />
+                className="absolute inset-0 rounded-3xl"
+              >
+                <span className="sr-only">Open the {item.text} demo</span>
+              </Link>
             </div>
           ))}
         </div>

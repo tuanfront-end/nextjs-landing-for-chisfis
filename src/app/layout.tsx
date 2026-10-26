@@ -1,16 +1,48 @@
-import { type Metadata } from 'next'
+import { type Metadata, type Viewport } from 'next'
 import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
 
+import { siteDescription, siteTitle, siteUrl } from '@/constant'
 import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     template: '%s - Chisfis',
-    default: 'Chisfis - Online travel booking Next.js template',
+    default: siteTitle,
   },
-  description:
-    'Chisfis is a responsive Next.js template designed for online booking, listing, real estate, and booking systems for accommodations, tours, travel experiences, cruises, car rentals, and travel agencies.',
+  description: siteDescription,
+  applicationName: 'Chisfis',
+  keywords: [
+    'booking template',
+    'travel booking template',
+    'Next.js template',
+    'HTML template',
+    'Tailwind CSS template',
+    'hotel booking',
+    'car rental',
+    'real estate',
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    url: '/',
+    siteName: 'Chisfis',
+    title: siteTitle,
+    description: siteDescription,
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteTitle,
+    description: siteDescription,
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#ffffff',
 }
 
 const inter = Inter({

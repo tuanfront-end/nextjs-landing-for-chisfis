@@ -3,21 +3,29 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import logoReact from '@/images/logos/reactjs.svg'
 import logoTailwind from '@/images/logos/tailwind.svg'
-import logoFigma from '@/images/logos/figma.svg'
+import logoHtml from '@/images/logos/html5.svg'
 import logoTypescript from '@/images/logos/typescript.svg'
 import logoNextjs from '@/images/logos/nextjs.svg'
-import { ArrowUpRightIcon } from '@heroicons/react/24/solid'
-import { LightBulbIcon } from '@heroicons/react/24/outline'
-import { buyNowLink, demoLink } from '@/constant'
+import logoAlpine from '@/images/logos/alpinejs.svg'
+import logoVite from '@/images/logos/vite.svg'
+import Link from 'next/link'
+import { ArrowRightIcon, ArrowUpRightIcon } from '@heroicons/react/24/solid'
+import { buyNowLink, currentVersion, demoLink } from '@/constant'
 
 export function Hero() {
   return (
     <Container className="overflow-hidden pt-8 pb-16 text-center sm:pt-10 2xl:pt-24">
-      <div className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-1.5 text-sm font-medium ring-1 ring-gray-500/10 ring-inset">
-        <LightBulbIcon className="-ml-1.5 size-5 text-blue-500" />
-        <span className="text-gray-700">Big update 2.0 has arrived!</span>
-      </div>
-      <h1 className="mx-auto mt-2 max-w-3xl font-display text-4xl/[1.25] font-medium tracking-tight text-slate-900 sm:text-5xl md:text-6xl xl:max-w-4xl xl:text-7xl">
+      <Link
+        href="#whats-new"
+        className="group inline-flex items-center gap-2.5 rounded-full bg-white py-1 ps-1 pe-4 text-sm font-medium ring-1 ring-slate-900/10 ring-inset hover:ring-slate-900/20"
+      >
+        <span className="rounded-full bg-blue-600 px-2.5 py-0.5 text-xs font-semibold text-white">
+          {currentVersion}
+        </span>
+        <span className="text-slate-700">Now with an HTML edition</span>
+        <ArrowRightIcon className="size-3.5 text-slate-400 transition-transform group-hover:translate-x-0.5" />
+      </Link>
+      <h1 className="mx-auto mt-2 max-w-3xl font-display text-4xl/[1.25] font-medium tracking-tight text-balance text-slate-900 sm:text-5xl md:text-6xl xl:max-w-5xl xl:text-7xl">
         Modern{' '}
         <span className="relative whitespace-nowrap text-blue-600">
           <svg
@@ -30,12 +38,12 @@ export function Hero() {
           </svg>
           <span className="relative">travel booking</span>
         </span>{' '}
-        Next.js template
+        template for Next.js &amp; HTML
       </h1>
-      <p className="mx-auto mt-7 max-w-4xl text-xl tracking-tight text-slate-700">
-        Chisfis is a premium Next.js template for building modern booking
-        platforms like Airbnb & Booking.com, combining high-end UI with a
-        scalable frontend to help you launch faster.
+      <p className="mx-auto mt-7 max-w-4xl text-xl tracking-tight text-balance text-slate-700">
+        Stays, experiences, car rentals, flights and real estate in one
+        template, with a booking that carries from search to checkout to
+        confirmation. Both editions share the same pages and interactions.
       </p>
       <div className="mt-12 flex flex-wrap justify-center gap-4 sm:gap-x-5">
         <Button href={demoLink} color="slate" target="_blank">
@@ -53,18 +61,20 @@ export function Hero() {
       </div>
       <div className="mt-20 2xl:mt-32">
         <p className="font-display text-base text-slate-600">
-          Built on the most modern technologies
+          Built with the tools you already use
         </p>
         <ul
           role="list"
           className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-10 xl:gap-x-12"
         >
           {[
-            { name: 'Figma', logo: logoFigma },
-            { name: 'React', logo: logoReact },
             { name: 'Next.js', logo: logoNextjs },
-            { name: 'Tailwind', logo: logoTailwind },
-            { name: 'Typescript', logo: logoTypescript },
+            { name: 'React', logo: logoReact },
+            { name: 'TypeScript', logo: logoTypescript },
+            { name: 'Tailwind CSS', logo: logoTailwind },
+            { name: 'HTML5', logo: logoHtml },
+            { name: 'Alpine.js', logo: logoAlpine },
+            { name: 'Vite', logo: logoVite },
           ].map((company) => (
             <li key={company.name} className="flex">
               <Image

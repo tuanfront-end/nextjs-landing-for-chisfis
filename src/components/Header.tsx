@@ -80,7 +80,8 @@ function MobileNavigation() {
         transition
         className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 data-closed:scale-95 data-closed:opacity-0 data-enter:duration-150 data-enter:ease-out data-leave:duration-100 data-leave:ease-in"
       >
-        <MobileNavLink href="#demos">30+ Pages</MobileNavLink>
+        <MobileNavLink href="#whats-new">What&apos;s new</MobileNavLink>
+        <MobileNavLink href="#demos">Pages</MobileNavLink>
         <MobileNavLink href="#features">Features</MobileNavLink>
         <MobileNavLink href={changelogLink} target="_blank">
           Changelog
@@ -100,11 +101,12 @@ export function Header() {
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
+            <Link href="/" aria-label="Chisfis home">
               <Logo className="h-12 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-3">
-              <NavLink href="#demos">30+ Pages</NavLink>
+              <NavLink href="#whats-new">What&apos;s new</NavLink>
+              <NavLink href="#demos">Pages</NavLink>
               <NavLink href="#features">Features</NavLink>
               <NavLink target="_blank" href={changelogLink}>
                 Changelog
