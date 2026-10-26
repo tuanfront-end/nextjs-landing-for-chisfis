@@ -33,8 +33,8 @@
 
   --radius-4xl: 2rem;
 
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-lexend);
+  --font-sans: var(--font-google-sans-flex);
+  --font-display: var(--font-google-sans-flex);
 
   --container-2xl: 40rem;
 }

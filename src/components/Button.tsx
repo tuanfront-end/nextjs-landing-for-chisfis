@@ -3,9 +3,9 @@ import clsx from 'clsx'
 
 const baseStyles = {
   solid:
-    'group inline-flex items-center justify-center rounded-full py-2.5 sm:px-6 px-4 text-base font-semibold focus-visible:outline-2 focus-visible:outline-offset-2',
+    'group inline-flex items-center justify-center whitespace-nowrap rounded-full py-2.5 sm:px-6 px-4 text-base font-semibold focus-visible:outline-2 focus-visible:outline-offset-2',
   outline:
-    'group inline-flex ring-1 items-center justify-center rounded-full py-2.5 sm:px-6 px-4 text-base font-medium',
+    'group inline-flex ring-1 items-center justify-center whitespace-nowrap rounded-full py-2.5 sm:px-6 px-4 text-base font-medium',
 }
 
 const variantStyles = {
@@ -55,9 +55,11 @@ export function Button({ className, ...props }: ButtonProps) {
     className,
   )
 
-  return typeof props.href === 'undefined' ? (
-    <button className={className} {...props} />
+  const { variant, color, ...rest } = props
+
+  return typeof rest.href === 'undefined' ? (
+    <button className={className} {...rest} />
   ) : (
-    <Link className={className} {...props} />
+    <Link className={className} {...rest} />
   )
 }

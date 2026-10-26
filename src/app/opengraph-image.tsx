@@ -13,9 +13,9 @@ const toDataUri = (data: Buffer) =>
   `data:image/jpeg;base64,${data.toString('base64')}`
 
 export default async function Image() {
-  const [lexendRegular, lexendMedium, stays, realEstate] = await Promise.all([
-    asset('lexend-400.woff'),
-    asset('lexend-500.woff'),
+  const [fontRegular, fontMedium, stays, realEstate] = await Promise.all([
+    asset('google-sans-flex-400.woff'),
+    asset('google-sans-flex-500.woff'),
     asset('stays.jpg'),
     asset('real-estate.jpg'),
   ])
@@ -27,7 +27,7 @@ export default async function Image() {
         height: '100%',
         display: 'flex',
         background: '#f8fafc',
-        fontFamily: 'Lexend',
+        fontFamily: 'Google Sans Flex',
         color: '#0f172a',
         overflow: 'hidden',
       }}
@@ -137,8 +137,18 @@ export default async function Image() {
     {
       ...size,
       fonts: [
-        { name: 'Lexend', data: lexendRegular, weight: 400, style: 'normal' },
-        { name: 'Lexend', data: lexendMedium, weight: 500, style: 'normal' },
+        {
+          name: 'Google Sans Flex',
+          data: fontRegular,
+          weight: 400,
+          style: 'normal',
+        },
+        {
+          name: 'Google Sans Flex',
+          data: fontMedium,
+          weight: 500,
+          style: 'normal',
+        },
       ],
     },
   )

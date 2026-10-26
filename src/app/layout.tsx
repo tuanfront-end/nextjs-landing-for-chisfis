@@ -1,5 +1,5 @@
 import { type Metadata, type Viewport } from 'next'
-import { Inter, Lexend } from 'next/font/google'
+import { Google_Sans_Flex } from 'next/font/google'
 import clsx from 'clsx'
 
 import { siteDescription, siteTitle, siteUrl } from '@/constant'
@@ -45,16 +45,14 @@ export const viewport: Viewport = {
   themeColor: '#ffffff',
 }
 
-const inter = Inter({
+const googleSansFlex = Google_Sans_Flex({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
-})
-
-const lexend = Lexend({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-lexend',
+  axes: ['opsz'],
+  // next/font has no metric overrides for this family yet, so name the fallbacks
+  fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
+  adjustFontFallback: false,
+  variable: '--font-google-sans-flex',
 })
 
 export default function RootLayout({
@@ -67,8 +65,7 @@ export default function RootLayout({
       lang="en"
       className={clsx(
         'h-full scroll-smooth bg-white antialiased',
-        inter.variable,
-        lexend.variable,
+        googleSansFlex.variable,
       )}
     >
       <body className="flex h-full flex-col">{children}</body>
